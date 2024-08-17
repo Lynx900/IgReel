@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: rgb(40, 40, 93);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            font-weight: lighter;
+            background-color: #f4f4f4;
+        }
+
+        .gray {
+            background-color: rgb(212, 205, 205);
+        }
+
+        .grey {
+            background-color: rgb(203, 192, 192);
+        }
+
+        .yellow {
+            background-color: rgb(255, 191, 0);
+        }
+
+        .lite {
+            background-color: rgb(215, 215, 141);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            th, td {
+                font-size: 0.9em;
+                padding: 6px;
+            }
+
+            table {
+                width: 100%;
+            }
+
+            tbody, th, td, tr {
+                display: block;
+            }
+
+            thead {
+                display: none;
+            }
+
+            tr {
+                margin-bottom: 15px;
+            }
+
+            td {
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+            }
+
+            td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 45%;
+                padding-left: 10px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>STRATEGIC ENGAGEMENT PLAN TEMPLATE - EXAMPLE</h1>
+<table>
+    <thead>
+        <tr>
+            <th colspan="2" class="gray">STAKEHOLDER</th>
+            <th colspan="3" class="grey">PROJECT PHASE</th>
+            <th colspan="4" class="yellow">INITIATION</th>
+        </tr>
+        <tr>
+            <td class="gray" data-label="ROLE">ROLE</td>
+            <td class="gray" data-label="NAME">NAME</td>
+            <td class="gray" data-label="CATEGORY">CATEGORY</td>
+            <td class="gray" data-label="INTEREST">INTEREST</td>
+            <td class="gray" data-label="INFLUENCE">INFLUENCE</td>
+            <td class="lite" data-label="EXPECTATIONS">EXPECTATIONS</td>
+            <td class="lite" data-label="COMMUNICATION APPROACH">COMMUNICATION APPROACH</td>
+            <td class="lite" data-label="FREQUENCY">FREQUENCY</td>
+            <td class="lite" data-label="CONCERNS">CONCERNS</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="ROLE">Sponsor</td>
+            <td data-label="NAME">Krista Ahmed</td>
+            <td data-label="CATEGORY" style="background-color: rgb(209, 147, 209);">Internal</td>
+            <td data-label="INTEREST" style="background-color: red;">High</td>
+            <td data-label="INFLUENCE" style="background-color: red;">High</td>
+            <td data-label="EXPECTATIONS">Financial and strategic support</td>
+            <td data-label="COMMUNICATION APPROACH" style="background-color: rgba(224, 224, 112, 0.475);">Email</td>
+            <td data-label="FREQUENCY">Daily</td>
+            <td data-label="CONCERNS" class="lite">Return on investment</td>
+        </tr>
+        <tr>
+            <td data-label="ROLE">Project Lead</td>
+            <td data-label="NAME">Melissa Brundige</td>
+            <td data-label="CATEGORY" style="background-color: rgb(168, 210, 168);">External</td>
+            <td data-label="INTEREST" style="background-color: red;">High</td>
+            <td data-label="INFLUENCE" style="background-color: rgb(214, 155, 17);">Medium</td>
+            <td data-label="EXPECTATIONS">Guide project success</td>
+            <td data-label="COMMUNICATION APPROACH" style="background-color: rgba(224, 224, 112, 0.475);">Phone</td>
+            <td data-label="FREQUENCY">Twice weekly</td>
+            <td data-label="CONCERNS" class="lite">Team coordination</td>
+        </tr>
+        <tr>
+            <td data-label="ROLE">Project Manager</td>
+            <td data-label="NAME">Mstislav Kovar</td>
+            <td data-label="CATEGORY" style="background-color: rgba(174, 166, 166, 0.31)"></td>
+            <td data-label="INTEREST" style="background-color: rgb(214, 155, 17);">Medium</td>
+            <td data-label="INFLUENCE" style="background-color: cyan;">Low</td>
+            <td data-label="EXPECTATIONS">Ensure project completion / delivery</td>
+            <td data-label="COMMUNICATION APPROACH" style="background-color: rgba(224, 224, 112, 0.475);">Email</td>
+            <td data-label="FREQUENCY">Weekly</td>
+            <td data-label="CONCERNS" class="lite">Optimizing project efficiency</td>
+        </tr>
+        <tr>
+            <td data-label="ROLE">Supervisor</td>
+            <td data-label="NAME">Roderick Edwards</td>
+            <td data-label="CATEGORY" style="background-color: rgba(174, 166, 166, 0.31)"></td>
+            <td data-label="INTEREST" style="background-color: rgb(214, 155, 17);">Medium</td>
+            <td data-label="INFLUENCE" style="background-color: rgb(214, 155, 17);">Medium</td>
+            <td data-label="EXPECTATIONS">Oversee task execution</td>
+            <td data-label="COMMUNICATION APPROACH" style="background-color: rgba(224, 224, 112, 0.475);">Video conference</td>
+            <td data-label="FREQUENCY">Twice Monthly</td>
+            <td data-label="CONCERNS" class="lite">Task completion</td>
+        </tr>
+        <tr>
+            <td data-label="ROLE">PMO</td>
+            <td data-label="NAME">Suman Shine</td>
+            <td data-label="CATEGORY" style="background-color: rgba(174, 166, 166, 0.31)"></td>
+            <td data-label="INTEREST" style="background-color: rgb(214, 155, 17);">Medium</td>
+            <td data-label="INFLUENCE" style="background-color: cyan;">Low</td>
+            <td data-label="EXPECTATIONS">Ensure project governance</td>
+            <td data-label="COMMUNICATION APPROACH" style="background-color: rgba(224, 224, 112, 0.475);">Email</td>
+            <td data-label="FREQUENCY">Monthly</td>
+            <td data-label="CONCERNS" class="lite">Project alignment</td>
+        </tr>
+        <tr>
+            <td data-label="ROLE">IT Support team</td>
+            <td data-label="NAME">Youko Omande</td>
+            <td data-label="CATEGORY" style="background-color: rgba(174, 166, 166, 0.31)"></td>
+            <td data-label="INTEREST" style="background-color: cyan;">Low</td>
+            <td data-label="INFLUENCE" style="background-color: rgb(214, 155, 17);">Medium</td>
+            <td data-label="EXPECTATIONS">Resolve technical issues promptly</td>
+            <td data-label="COMMUNICATION APPROACH" style="background-color: rgba(224, 224, 112, 0.475);">Email</td>
+            <td data-label="FREQUENCY">Twice Monthly</td>
+            <td data-label="CONCERNS" class="lite">System functionality</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

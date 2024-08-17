@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+      
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            padding: 10px;
+            background-color:rgba(102, 77, 77, 0.486);
+            color: white;
+           
+        }
+        h2{
+            padding-left: 120px;
+        }
+        .box{
+            width: 300px;
+            height: 480px;
+            border-radius: 7px;
+            border: px solid;
+            margin-left: 65px;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: gray;
+        }
+        div{
+           padding-left: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+        .dep{
+            padding-left: 20px;
+        }
+        input{
+            border-radius: 7px;
+            padding: 5px;
+        }
+        select{
+            border-radius: 7px;
+            padding: 5px;
+        }
+        button{
+            width: 50%;
+            margin-left: 40px;
+            
+        }
+    </style>
+</head>
+<body>
+   
+    <div>
+        <form action="">
+            <h2>Suggest a route</h2> <br>
+            We plan on serving you better, suggest a route we should go now <br>
+
+           <br> <div class="box">
+                <h2 style="padding-left: 50px;">Routes</h2> <br>
+                <p style="font-size: 14px; padding-left: 13px;">
+                    Please kindly provide the little information below and submit
+                </p> <br>
+                <div class="dep">
+                <label for="">Route Departure</label> <br>
+                <select name="">
+                    <option value="">Enter Departure route</option>
+                </select> <br>
+                <br><label for="">Destination route</label> <br>
+                <select name="">
+                    <option value="">Enter Arrival route</option>
+                </select> <br>
+                <br> <label for="">Full name</label> <br>
+                <input type="text" placeholder="Full name"> <br>
+                <br> <label for="">email</label> <br>
+                <input type="text" placeholder="example@gmail.com"> <br>
+                <br> <label for="">Phone number</label> <br>
+                <input type="text" placeholder="Enter phone number"> <br>
+              
+            </div>
+             <br> <button>Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

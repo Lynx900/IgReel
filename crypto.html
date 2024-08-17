@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    nav{
+        text-decoration: none;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px;
+       
+    }
+    footer{
+        text-decoration: none;
+        margin-top: 15px;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+    li{
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+    }
+    button{
+        background-color: rgb(136, 66, 166);
+        color: wheat;
+        padding: 8px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        
+    }
+    p{
+        font-size: 13px;
+        color: rgb(136, 66, 166);
+    }
+    .purple{
+        color: rgb(136, 66, 166);
+    }
+    .gen{
+        display: flex;
+        margin: 10px;
+        
+    }
+    .pic{
+        margin: 20px;
+        mix-blend-mode: lighten;
+    }
+    
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .Register{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100px;
+        margin: 0;
+    }
+     
+     @media (max-width: 768px) {
+        
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 24px;
+    }
+
+            .gen {
+                flex-direction: row;
+                text-align: center;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            nav, footer {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 20px;
+            }
+
+            nav li, footer ul {
+                flex-direction: row;
+            }
+
+            footer ul {
+                margin: 0 0;
+            }
+            p{
+                width: 100%;
+                font-size: 15px;
+            }
+            .gen{
+                display: inline;
+            }
+            .Register{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+        }
+</style>
+<body>
+        <nav>
+            <li>
+               <a href=""><ul>DCT</ul>   </a> 
+            </li>
+            <li>
+                <li class="dropdown">
+                <a href=""><ul>Service</ul></a>
+               <a href=""><ul>Investment</ul></a> 
+               <a href=""><ul>Testimonials</ul></a> 
+               </li>
+            </li>
+            <li>
+                <a href=""><ul>Login</ul></a>
+                <button>Register</button>
+               
+                
+            </li> 
+            <div class="menu-toggle" id="menu-toggle">
+                    &#9776; </div>
+        </nav>
+        <div class="gen">
+        <div>
+        <h1>Fastest & Secure</h1> <br>
+        <h1>Platform to invest</h1> <br>
+        <h1>in <span class="purple">Crypto</span> </h1> <br>
+        <p>At crest Holding LTD, we believe in democratizing access to the world of <br> Finance and Investment. Join us on our journey to reshape the future of finance.</p> <br>
+
+       
+    </div>
+
+    <div class="pic">
+        <img src="img/coin.jpeg" alt="">
+    </div> 
+</div><button class="Register">Register now</button>
+<footer>
+    <ul>
+        <a href=""><li>Binance</li></a>
+    </ul>
+    <ul>
+       <a href=""><li>Coinbase</li></a> 
+    </ul>
+    <ul>
+        <a href=""><li>Crypto.com</li></a>
+    </ul>
+    <ul>
+        <a href=""><li>Metamask</li></a>
+    </ul>
+    <ul>
+        <a href=""><li>Bitcoin</li></a>
+    </ul>
+</footer>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LYNX MOTORS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        nav{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 60px;
+            justify-content: space-between;
+            text-decoration: none;
+            padding: 10px;
+            align-items: center;
+            background-color: white;
+        }
+        .navi{
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        li{
+            list-style: none;
+            display: inline;
+            margin: 0;
+            padding: 10px;
+        }
+        .img{
+            width: 50px;
+            height: 50px;
+        }
+        .sign{
+            border-radius: 5px;
+            background-color: rgb(37, 138, 169);
+            color: white;
+            border: none;
+            padding: 5px;
+        }
+        .sign:hover{
+            background-color: brown;
+        }
+        a:hover{
+            border-bottom: 1px solid;
+        }
+        .body{
+            width: 100%;
+            height: 120vh;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-image: url(img/pic.webp);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            color: rgb(85, 72, 72);
+        }
+        .booking{
+            width: 400px;
+            border-radius: 10px;
+            font-size: 13px;
+            background-color: rgb(57, 54, 47);
+            color: white;
+        }
+        .sub{
+            padding-top: 120px;
+        }
+        .booker{
+            height: 420px;
+            width: 400px;
+            border-radius:0 0 10px 10px;
+            padding-top: 65px;
+        }
+        a{
+            text-decoration: none;
+            list-style: none;
+            color: black;
+        }
+        .bodys, .bodyl {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 60%;
+            padding: 20px;
+            height: 85vh;
+        }
+        .bodyz {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px;
+            height: 85vh;
+        }
+        .subs{
+            padding-top: 40px;
+        }
+        .imgs, .imgd, .imgx {
+            display: flex;
+        }
+        .imgx {
+            width: 450px;
+            height: 350px;
+            padding-left: 220px;
+        }
+        .imgd {
+            width: 200px;
+            height: 300px;
+            padding-left: 130px;
+        }
+        .form{
+            padding: 20px;
+        }
+       .button{
+            width: 100%;
+            padding: 7px;
+       }
+       .dep{
+            display: flex;
+            justify-content: space-between;
+       }
+       select{
+            width: 100%;
+            padding: 5px;
+            border-radius: 10px;
+       }
+       .dex{
+            width: 50%;
+       }
+       .date{
+            padding: 5px;
+       }
+       .book{
+            background-color: gray;
+       }
+       .one{
+            background-color: rgb(41, 105, 105);
+            padding: 5px;
+            color: white;
+            border-radius: 5px;
+       }
+       .Round{
+            padding: 5px;
+            border-radius: 5px;
+            color: rgb(40, 86, 178);
+            border: 1px solid rgb(40, 86, 178);
+            background-color: rgb(40, 40, 57);
+       }
+       .arrow{
+            width: 80px;
+            display: flex;
+            justify-content: space-between;
+            margin: 50px;
+            margin-top: 0;
+       }
+       .a{
+            clip-path: circle();
+            background-color: black;
+            color: white;
+            padding: 8px;
+       }
+       .Round:hover{
+            background-color:  rgb(41, 105, 105);
+            color: white;
+       }
+       .end{
+            width: 100%;
+            height: 100vh;
+       }
+       .box{
+            border: 1px solid;
+            width: 220px;
+            height: 330px;
+            margin-left: 30px;
+            padding: 15px;
+            background-color: aqua;
+            border-radius: 10px;
+            padding-top: 20px;
+       }
+       .boxx{
+            border: 1px solid;
+            width: 55%;
+            height: 300px;
+            padding: 10px;
+            background-color: aqua;
+            padding-top: 60px;
+            padding-left: 60px;
+       }
+       .Start{
+            padding: 7px;
+            border-radius: 8px;
+            background-color: red;
+            color: white;
+            width: 65%;
+       }
+       .foot{
+            height: 40vh;
+            width: 80%;
+       }
+       .ysl{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            gap: 10px;
+            row-gap: 20px;
+       }
+
+       /* Media Queries */
+       @media (max-width: 1024px) {
+           .body, .bodys, .bodyz, .bodyl {
+               flex-direction: column;
+               align-items: center;
+               text-align: center;
+           }
+           .imgx, .imgd {
+               justify-content: center;
+               padding-left: 0;
+           }
+           .box, .boxx {
+               width: 80%;
+               margin: 10px 0;
+           }
+       }
+
+       @media (max-width: 768px) {
+           .bodys, .bodyl {
+               width: 100%;
+           }
+           .nav ul {
+               flex-direction: column;
+               align-items: center;
+           }
+           .nav ul li {
+               display: block;
+               margin: 5px 0;
+           }
+           .form {
+               width: 90%;
+           }
+           .imgs img, .imgd img, .imgx img {
+               width: 100%;
+               height: auto;
+           }
+       }
+
+       @media (max-width: 480px) {
+           .nav ul {
+               flex-direction: column;
+               align-items: center;
+           }
+           .nav ul li {
+               display: block;
+               margin: 5px 0;
+           }
+           .sign {
+               width: 100%;
+               text-align: center;
+           }
+           .sub {
+               padding-top: 80px;
+           }
+           .booker {
+               width: 100%;
+               padding-top: 0;
+               margin-top: 0;
+           }
+           .imgs, .imgd, .imgx {
+               flex-direction: column;
+               align-items: center;
+           }
+           .foot {
+               width: 100%;
+               text-align: center;
+           }
+       }
+    </style>
+</head>
+<body>
+    <header>
+        <form action="">
+        <nav class="navi">
+            <ul ><img src="img/LLYNX.jpg" alt="" class="img"></ul>
+            <ul>
+                <a href="pickup.html"><li>Move freely</li></a>
+                <a href="do-freely.html"><li>Do freely</li></a>
+                <a href="suggest.html"><li>Suggest route</li></a>
+                <button class="sign">Sign in/Sign up</button> 
+            </ul>
+        </nav>
+        </form>
+    </header>
+    <div class="body">
+        <div class="sub">
+            <h1 style="color: white;">The modern way to</h1>
+            <h1 style="color: white;">commute across cities</h1> <br>
+            <p style="color: white;">
+                LYNX is an African technology powered company, <br>
+                providing seamless mobility services to commuters <br>
+                across Africa
+            </p>
+        </div>
+        <div class="booker">
+            <div class="booking">
+                <nav class="book">
+                    <ul>
+                        <a href=""><li style="color: white;">Book a seat</li></a>
+                        <a href=""><li style="color: white;">Hire a bus</li></a>
+                        <a href=""><li style="color: white;">Booking Status</li></a>
+                        <a href=""><li style="color: white;">Book a Flight</li></a>
+                    </ul>
+                </nav>
+                <form action="" class="form">
+                    <button class="one">One way</button>
+                    <button class="Round">Round trip</button> <br>
+                    <div class="travel">
+                        <br> <p>
+                            <label for="#">Travelling from</label> <br>
+                            <br> <select name="#">
+                                <option value="">Departure terminal</option>
+                                <option value="">Abia=>Aba</option>
+                                <option value="">Cross River=>Calabar</option>
+                                <option value="">Akwa Ibom=> Uyo</option>
+                                <option value="">Anambara=> Awka</option>
+                                <option value="">Bayelsa=> Yenegoa</option>
+                                <option value="">Delta (south-south)=> Warri</option>
+                                <option value="">Edo=> Benin</option>
+                                <option value="">Edo=> Ekpoma</option>
+                                <option value="">Edo=> Auchi</option>
+                                <option value="">Enugu=> Enugu</option>
+                                <option value="">Lagos=> Ikeja</option>
+                                <option value="">Osun=> Oshogbo</option>
+                                <option value="">Abuja=> FCT</option>
+                            </select>
+                        </p>
+                        <br><p>
+                            <label for="#">Travelling To</label>
+                            <select name="">
+                                <option value="">Arrival</option>
+                                <option value="">Anambara=> Awka</option>
+                                <option value="">Bayelsa=> Yenegoa</option>
+                                <option value="">Delta (south-south)=> Warri</option>
+                                <option value="">Edo=> Benin</option>
+                                <option value="">Edo=> Ekpoma</option>
+                                <option value="">Edo=> Auchi</option>
+                                <option value="">Enugu=> Enugu</option>
+                                <option value="">Lagos=> Ikeja</option>
+                                <option value="">Osun=> Oshogbo</option>
+                                <option value="">Abuja=> FCT</option>
+                            </select>
+                        </p>
+                        <br> 
+                        <div class="dep">
+                            <div class="dex">
+                                <label for="">Departure time:</label>
+                                <input type="date" class="date"> <br>
+                            </div>
+                            <div class="dex">
+                                <label for="">Arrival</label> <br>
+                                <select name="">
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                    <option value="">6</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br><button class="button">Proceed</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="bodys">
+        <div class="subs">
+            <h1>Best trip prices</h1> 
+            <p>
+                Bringing you more routes at the <br> best fares. <br>
+                <br>
+                <div class="arrow">
+                    <div class="a">
+                        <i>&#8592;</i>
+                    </div>
+                    <div class="a">
+                        <i>&#8594;</i>
+                    </div>
+                </div>
+            </p> 
+        </div>
+        <div class="imgs">
+            <img src="img/img1.webp" alt="">
+            <img src="img/img2.webp" alt="">
+            <img src="img/img3.webp" alt="">
+        </div>
+    </div>
+    <div class="bodyz">
+        <div class="boxx">
+            <h2>Enjoy the <span style="color: red;">LYNX Advantages</span> <br> Move Freely, Do Easily</h2> <br>
+            <br> <p style="font-size: 15px;">
+                It is all you need in one travel app. Book bus tickets, hire a <br> vehicle and pay bills
+            </p>
+        </div>
+    </div>
+    <div class="bodys">
+        <div class="subs">
+            <h1>The lightest <br> digital wallet you <br> will ever own</h1>
+            <p style="font-size: 10px;">
+                The LYNX digital wallet is a seamless way to pay for <br> transactions within our ecosystem. Purchase bus <br> tickets, airtime, data and pay for utility bills using the <br> digital wallet available only on the mobile app.
+            </p>
+        </div>
+        <div class="imgd">
+            <img src="img/card.10c67e8f.webp" alt="">
+        </div>
+    </div>
+    <div class="bodyl">
+        <div class="bbx">
+            <div class="box">
+                <h2>We do the <br>heavy lifting</h2> <br>
+                <br> <p>
+                    Earn easy with LYNX <br>
+                    <br>Become an enterprise partner today!
+                </p>
+                <br> <br><button class="Start">Start Earning</button>
+            </div>
+        </div>
+        <div class="imgx">
+            <img src="img/man.6270bbd6.webp" alt="">
+        </div>
+    </div>
+    <footer>
+        <div class="foot">
+            <nav class="ysl">
+                <ul ><img src="img/LLYNX.jpg" alt="" class="img"></ul>
+                <ul>
+                    <li style="font-weight: bold;">Company</li>
+                    <li>About us</li>
+                    <li>Team</li>
+                </ul>
+                <ul>
+                    <li style="font-weight: bold;">Experience</li>
+                    <li>Contact us</li>
+                    <li>FAQs</li>
+                    <li>Find a terminal</li>
+                    <li>Blog</li>
+                </ul>
+                <ul>
+                    <li style="font-weight: bold;">Terms</li>
+                    <li>Privacy policy</li>
+                    <li>Terms & Conditions</li>
+                </ul>
+                <ul>
+                    <li style="font-weight: bold;">Contact us</li>
+                    <i class="fa-brands fa-twitter"></i>
+                    <li>Terms & Conditions</li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
